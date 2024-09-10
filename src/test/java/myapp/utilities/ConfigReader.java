@@ -27,7 +27,7 @@ public class ConfigReader {
         }
     }
 
-    public static String getProperties(String key){
+    public static String getProperty(String key){
 
         String value=properties.getProperty(key);
 
