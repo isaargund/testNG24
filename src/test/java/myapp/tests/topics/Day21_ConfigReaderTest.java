@@ -12,7 +12,7 @@ public class Day21_ConfigReaderTest {
         //Driver.getDriver().get("https://www.amazon.com/");
 
 
-        Driver.getDriver().get(ConfigReader.getProperties("amazon_url"));
+        Driver.getDriver().get(ConfigReader.getProperty("amazon_url"));
 
         Thread.sleep(2000);
         Driver.getDriver().navigate().refresh();
@@ -22,7 +22,7 @@ public class Day21_ConfigReaderTest {
         System.out.println("title= "+title);
 
 
-        Assert.assertTrue(title.contains(ConfigReader.getProperties("amazon_title")));
+        Assert.assertTrue(title.contains(ConfigReader.getProperty("amazon_title")));
 
         Driver.closeDriver();
     }
