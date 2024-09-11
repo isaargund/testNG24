@@ -23,5 +23,8 @@ public class BlueRental_LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
+    @FindBy (xpath = "//div[contains(text(),'User with email fake@bluerentalcars.com not found')]")
+    public WebElement unsuccessfullogin;
+
 
 }
