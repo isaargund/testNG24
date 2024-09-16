@@ -1,5 +1,6 @@
 package myapp.tests.dataprovider;
 
+import myapp.utilities.DataProviderUtils;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -64,4 +65,17 @@ public class Day23_DataProvider1 {
         System.out.println("UserName: " + username + " | Password: " + password + " | Position :" + position + " | Age: " +age);
     }
 
+
+
+    // Test Method 4 => works with DataProviderUtils class
+@Test(dataProvider = "employeeCredentialsProvider",dataProviderClass = DataProviderUtils.class)
+    public void test4(String email,String password){
+    System.out.println("Email: " + email + " | Password: " + password);
+
+}
+    @Test(dataProvider = "excelEmployeeData",dataProviderClass = DataProviderUtils.class)
+    public void test5(String email,String password){
+        System.out.println("Email: " + email + " | Password: " + password);
+
+    }
 }

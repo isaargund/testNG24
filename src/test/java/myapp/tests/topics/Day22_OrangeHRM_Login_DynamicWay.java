@@ -53,7 +53,7 @@ public class Day22_OrangeHRM_Login_DynamicWay {
 // Then verify the logout is successful
     }
 
-    @Test
+    @Test(groups = "minor_regression_group")
     public void loginTestDynamic_ReusableMethods() {
         // Given user is the application login page
         Driver.getDriver().get(ConfigReader.getProperty("orangeHRM_url"));

@@ -57,7 +57,7 @@ public class Day23_ExcelLogin {
     }
 
     //WITH EXCEL
-    @Test
+    @Test(groups = "minor_regression_group")
     public void loginTestWithExcel(){
         // Path of the Excel sheet
         String pathOfExcel = "./resources/data_sheet.xlsx";
