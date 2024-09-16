@@ -18,7 +18,7 @@ public class Day23_DataProvider1 {
 
     //Test Method 1
 
-    @Test(dataProvider = "productProvider")//call data provider method by its name and connect wit test method
+    @Test(dataProvider = "productProvider")//call data provider method by its name and connect with test method
     public void test1(String data){
 
         System.out.println(data);
@@ -26,7 +26,7 @@ public class Day23_DataProvider1 {
 
   //DataProvider Method 2
     @DataProvider
-    public Object[][] credentialProvider(){
+    public Object[][] productListProvider(){
         Object[][] credentialList ={
                 {"admin1", "pass1", "CEO", "52"},
                 {"admin2", "pass2", "SDET", "45"},
@@ -37,7 +37,7 @@ public class Day23_DataProvider1 {
         return credentialList;
     }
     @DataProvider(name="employee_credentials")
-    public Object[][] credentialProvider2(){
+    public Object[][] credentialProvider(){
         Object[][] credentialList ={
                 {"admin1", "pass1", "CEO", "52"},
                 {"admin2", "pass2", "SDET", "45"},
@@ -51,7 +51,7 @@ public class Day23_DataProvider1 {
 
     //tEST Method 2
     //Test Method 2
-    @Test (dataProvider = "credentialProvider")
+    @Test (dataProvider = "productListProvider")
     public void test2(String username, String password, String position, String age){
         System.out.println("UserName: " + username + " | Password: " + password + " | Position :" + position + " | Age: " +age);
     }
@@ -60,7 +60,7 @@ public class Day23_DataProvider1 {
 
 
     //Test Method 3
-    @Test (dataProvider = "employee_credentials")
+    @Test (dataProvider = "credentialProvider")
     public void test3(String username, String password, String position, String age){
         System.out.println("UserName: " + username + " | Password: " + password + " | Position :" + position + " | Age: " +age);
     }

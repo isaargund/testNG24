@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/git/testngproject_JC001/src/test/java/myapp/tests/medunna_practice">
+        <classes>
+            <class name="myapp.tests.medunna_practice.Day24_US001">
+                <methods>
+                    <include name="medunnaTest1"/>
+                    <include name="medunnaTest2"/>
+                    <include name="medunnaTest3"/>
+                    <include name="medunnaTest4"/>
+                </methods>
+            </class>
+            <class name="myapp.tests.medunna_practice.Day24_US002">
+                <methods>
+                    <include name="medunna1"/>
+                    <include name="medunna2"/>
+                    <include name="medunna3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
